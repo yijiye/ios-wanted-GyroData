@@ -48,11 +48,6 @@ extension GyroDataListViewModel {
         gyroData.append(contentsOf: data)
     }
     
-    func isNoMoreDataPublisher() -> AnyPublisher<Bool, Never> {
-        return self.$isNoMoreData
-            .eraseToAnyPublisher()
-    }
-    
     func read(at indexPath: IndexPath) -> GyroEntity {
         gyroData[indexPath.row]
     }
